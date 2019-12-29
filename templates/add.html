@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Dear Diary</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+
+</head>
+
+
+
+<body>
+
+ <nav class="navbar navbar-dark bg-dark">
+  <h1><a class="navbar-brand" href="{% url 'home' %}">Diary</a></h1>
+</nav>
+
+
+    <section class="section">
+
+        <div class="container">
+            <div class='row'>
+                <div class='col-10 col-lg-8 col-sm-10'>
+                    <form action="" method='POST'>
+                        {% csrf_token %}
+                         <div class="form-group">
+                            {{ form.text }}
+                        </div>
+                
+                     <button class='button is-link' >Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+
+</html>
